@@ -375,7 +375,6 @@ a {
 /* =============================================
    GALERIA
    EX1: transició amb scale, rotate i grayscale al hover
-   overflow: hidden al contenidor galeria__grid per si de cas
    ============================================= */
 .galeria {
   padding: 3rem 2rem;
