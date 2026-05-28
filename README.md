@@ -67,7 +67,7 @@ Icones importades des de Google Fonts. Capa semitransparent sobre el vídeo amb 
 
 <img width="1070" height="386" alt="Controls sobre el vídeo" src="https://github.com/user-attachments/assets/42e368d8-ffe6-4c2a-8109-f7df376e3442" />
 
-<img width="823" height="472" alt="Vista general vídeo amb controls propis" src="https://github.com/user-attachments/assets/8f11176a-29ad-4d79-8881-56d7e463e6e4" />
+<img width="827" height="267" alt="Vista general vídeo amb controls propis" src="https://github.com/user-attachments/assets/2c149082-d7f1-41a2-a260-b7c9e2c9dc58" />
 
 ---
 
