@@ -1,31 +1,16 @@
 // =============================================
 // EX4: Controls del vídeo
 // =============================================
-var video = document.getElementById("video-restaurant");
-var btnPlay = document.getElementById("btn-play");
-var btnPause = document.getElementById("btn-pause");
-var btnVolum = document.getElementById("btn-volum");
-var btnSilenci = document.getElementById("btn-silenci");
+const video  = document.getElementById("video-restaurant");
+const btnPlay   = document.getElementById("btn-play");
+const btnPause  = document.getElementById("btn-pause");
+const btnVolum  = document.getElementById("btn-volum");
+const btnSilenci = document.getElementById("btn-silenci");
 
-// Al clicar play, el vídeo es posa en marxa
-btnPlay.onclick = function () {
-  video.play();
-};
-
-// Al clicar pause, el vídeo es pausa
-btnPause.onclick = function () {
-  video.pause();
-};
-
-// Al clicar volum, s'activa el so
-btnVolum.onclick = function () {
-  video.muted = false;
-};
-
-// Al clicar silenci, es silencia el vídeo
-btnSilenci.onclick = function () {
-  video.muted = true;
-};
+btnPlay.addEventListener("click", () => video.play());
+btnPause.addEventListener("click", () => video.pause());
+btnVolum.addEventListener("click", () => video.muted = false);
+btnSilenci.addEventListener("click", () => video.muted = true);
 
 // =============================================
 // EX5: Navbar shrink en fer scroll  
