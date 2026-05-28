@@ -1,0 +1,488 @@
+/* =============================================
+   VARIABLES PRINCIPALS
+   ============================================= */
+:root {
+  --marron: #2d5a3d;
+  --daurat: #defa92;
+  --fons: #f4faf6;
+  --text: #1a2e1f;
+  --blanc: #ffffff;
+  --vora: #b2d4bb;
+}
+
+/* =============================================
+   RESET BÀSIC
+   ============================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--fons);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =============================================
+   TÍTOL DE SECCIÓ
+   ============================================= */
+.seccio-titol {
+  font-size: 2rem;
+  color: var(--marron);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* =============================================
+   NAVEGACIÓ
+   ============================================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--marron);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__link {
+  color: var(--blanc);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.25s, color 0.25s;
+}
+
+.navbar__link:hover {
+  border-bottom: 2px solid var(--daurat);
+  color: var(--daurat);
+}
+
+/* =============================================
+   BOTÓ RESERVAR FLOTANT
+   ============================================= */
+.btn-reservar {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  background-color: var(--daurat);
+  color: var(--marron);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+.btn-reservar:hover {
+  background-color: var(--marron);
+  color: var(--blanc);
+  transform: translateY(-2px);
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #7dab8a;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero__text {
+  position: absolute;
+  z-index: 1;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 45%;
+}
+
+.hero__title {
+  font-size: 2.75rem;
+  color: var(--blanc);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero__title strong {
+  font-weight: 900;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  color: var(--daurat);
+  font-style: italic;
+}
+
+/* =============================================
+   SOBRE NOSALTRES
+   ============================================= */
+.sobre {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre__fila {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.sobre__fila--invertida {
+  flex-direction: row-reverse;
+}
+
+.sobre__img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: var(--daurat);
+  border: 4px solid var(--vora);
+}
+
+.sobre__text {
+  line-height: 1.75;
+}
+
+/* =============================================
+   CARTA
+   ============================================= */
+.carta {
+  background-color: #e8f5ec;
+  padding: 3rem 2rem;
+}
+
+.carta .seccio-titol {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+}
+
+.carta__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  grid-template-areas:
+    "menu-titol menu-titol"
+    "label1     contingut1"
+    "label2     contingut2";
+  border: 1px solid var(--vora);
+  background-color: var(--blanc);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.carta__menu-titol {
+  grid-area: menu-titol;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--marron);
+  padding: 1rem;
+  border-bottom: 1px solid var(--vora);
+  background-color: #edf7f0;
+}
+
+.carta__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--marron);
+  padding: 1rem;
+  border-right: 1px solid var(--vora);
+  border-bottom: 1px solid var(--vora);
+  background-color: #edf7f0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.carta__label:first-of-type  { grid-area: label1; }
+.carta__label:last-of-type   { grid-area: label2; }
+.carta__contingut:first-of-type { grid-area: contingut1; }
+.carta__contingut:last-of-type  { grid-area: contingut2; }
+
+.carta__contingut {
+  padding: 2rem;
+  border-bottom: 1px solid var(--vora);
+}
+
+.carta__contingut-titol {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--marron);
+  margin-bottom: 0.5rem;
+}
+
+.carta__descripcio {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.carta__imatges {
+  display: flex;
+  gap: 1rem;
+}
+
+.carta__imatge-container {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.carta__imatge {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background-color: var(--daurat);
+  transition: transform 0.25s;
+}
+
+.carta__imatge-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--blanc);
+  font-size: 0.875rem;
+  padding: 0.4rem;
+}
+
+/* =============================================
+   GALERIA
+   ============================================= */
+.galeria {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.galeria__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.galeria__img {
+  width: calc(25% - 1rem);
+  height: 180px;
+  object-fit: cover;
+  border: 3px solid var(--vora);
+  border-radius: 0.5rem;
+  background-color: #a8c9b0;
+  cursor: pointer;
+  transition: filter 0.25s, border-color 0.25s, transform 0.25s;
+  filter: brightness(1);
+}
+
+.galeria__img:nth-child(1),
+.galeria__img:nth-child(4),
+.galeria__img:nth-child(5),
+.galeria__img:nth-child(8) {
+  filter: brightness(0.55);
+}
+
+.galeria__img:hover {
+  border-color: var(--marron);
+  filter: brightness(0.65);
+  transform: scale(1.02);
+}
+
+/* =============================================
+   FORMULARI DE RESERVA
+   ============================================= */
+.reserva {
+  background-color: #e8f5ec;
+  padding: 3rem 2rem;
+}
+
+.reserva .seccio-titol {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.reserva__form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    "nom      persones"
+    "data     hora"
+    "descripcio descripcio"
+    ".        boto";
+}
+
+.reserva__grup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.reserva__grup--nom        { grid-area: nom; }
+.reserva__grup--persones   { grid-area: persones; }
+.reserva__grup--data       { grid-area: data; }
+.reserva__grup--hora       { grid-area: hora; }
+.reserva__grup--descripcio { grid-area: descripcio; }
+.reserva__grup--boto       { grid-area: boto; justify-content: flex-end; }
+
+.reserva__label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--marron);
+}
+
+.reserva__input,
+.reserva__textarea {
+  font-size: 1rem;
+  font-family: Georgia, serif;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--vora);
+  border-radius: 0.5rem;
+  background-color: var(--blanc);
+  color: var(--text);
+  width: 100%;
+  transition: border-color 0.25s;
+}
+
+.reserva__input:focus,
+.reserva__textarea:focus {
+  outline: none;
+  border-color: var(--marron);
+  box-shadow: 0 0 0 3px rgba(90, 62, 43, 0.15);
+}
+
+.reserva__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.reserva__boto {
+  background-color: var(--marron);
+  color: var(--blanc);
+  font-size: 1rem;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  padding: 0.65rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+.reserva__boto:hover {
+  background-color: var(--daurat);
+  color: var(--marron);
+  transform: translateY(-1px);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  background-color: var(--marron);
+  color: var(--blanc);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer__logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--daurat);
+}
+
+.footer__contacte {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+}
+
+.footer__icon {
+  font-size: 1.2rem;
+  color: var(--daurat);
+}
+
+.footer__link {
+  color: var(--blanc);
+  transition: color 0.25s;
+}
+
+.footer__link:hover {
+  color: var(--daurat);
+}
+
+.footer__img-logo {
+  height: 50px;
+  width: auto;
+  border-radius: 0.5rem;
+  min-width: 60px;
+}

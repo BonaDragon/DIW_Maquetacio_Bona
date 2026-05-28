@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant els Coberts</title>
+  <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Material Icons (icones per al footer) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVEGACIÓ FIXA ========== -->
+  <!-- Menú sticky a la part superior, maquetació amb flex -->
+  <nav class="navbar" aria-label="Navegació principal">
+    <ul class="navbar__links">
+      <!-- Cada link porta a la secció corresponent de la pàgina -->
+      <li><a href="#nosaltres" class="navbar__link">Nosaltres</a></li>
+      <li><a href="#carta" class="navbar__link">Carta</a></li>
+      <li><a href="#galeria" class="navbar__link">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== BOTÓ RESERVAR FLOTANT ========== -->
+  <a href="#reserva" class="btn-reservar">Reservar</a>
+
+  <!-- ========== CAPÇALERA / HERO ========== -->
+  <!-- Imatge que ocupa tota l'amplada, text posicionat a sobre -->
+  <header class="hero" id="inici">
+    <img
+      src="img/galeria7.jpg"
+      alt="Interior del restaurant Els Coberts amb taules decorades"
+      class="hero__img"
+    >
+    <!-- Text superposat a la imatge, a l'esquerra centrat verticalment -->
+    <div class="hero__text">
+      <h1 class="hero__title">Restaurant <strong>els Coberts</strong></h1>
+      <p class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </header>
+
+  <!-- ========== SOBRE NOSALTRES ========== -->
+  <!-- Dues files: img+text i text+img, maquetació amb flex -->
+  <section class="sobre" id="nosaltres" aria-labelledby="sobre-title">
+    <h2 class="seccio-titol" id="sobre-title">Sobre nosaltres</h2>
+
+    <!-- Fila 1: imatge esquerra, text dreta -->
+    <div class="sobre__fila">
+      <img
+        src="img/sobre1.jpg"
+        alt="El nostre equip de cuina preparant plats amb productes frescos"
+        class="sobre__img"
+      >
+      <p class="sobre__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+    <!-- Fila 2: text esquerra, imatge dreta -->
+    <div class="sobre__fila sobre__fila--invertida">
+      <img
+        src="img/sobre2.jpg"
+        alt="Sala principal del restaurant amb decoració mediterrània"
+        class="sobre__img"
+      >
+      <p class="sobre__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== CARTA ========== -->
+  <!-- Tot l'apartat (menys el títol) en un únic grid, maquetació amb grid-template-areas -->
+  <section class="carta" id="carta" aria-labelledby="carta-title">
+    <h2 class="seccio-titol" id="carta-title">Carta</h2>
+
+    <!-- Grid únic que conté: capçalera menú, menú 1 i menú 2 -->
+    <div class="carta__grid">
+
+      <!-- Títol del menú (ocupa tota l'amplada) -->
+      <div class="carta__menu-titol">Menú</div>
+
+      <!-- MENÚ 1 -->
+      <!-- Label de Menú 1 a l'esquerra -->
+      <div class="carta__label">Menú 1</div>
+      <!-- Contingut de Menú 1: text + imatges -->
+      <div class="carta__contingut">
+        <p class="carta__contingut-titol">Contingut</p>
+        <p class="carta__descripcio">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+        </p>
+        <!-- Imatges del Menú 1 amb text overlay a la part inferior -->
+        <div class="carta__imatges">
+          <div class="carta__imatge-container">
+            <img src="img/plat1.jpg" alt="Pasta casolana amb salsa de tomàquet fresc" class="carta__imatge">
+            <span class="carta__imatge-text">pasta</span>
+          </div>
+          <div class="carta__imatge-container">
+            <img src="img/plat2.jpg" alt="Entrants variats de temporada" class="carta__imatge">
+            <span class="carta__imatge-text">entrants</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENÚ 2 -->
+      <div class="carta__label">Menú 2</div>
+      <div class="carta__contingut">
+        <p class="carta__contingut-titol">Contingut</p>
+        <p class="carta__descripcio">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+        </p>
+        <div class="carta__imatges">
+          <div class="carta__imatge-container">
+            <!-- Substituir src per imatge del plat (ex: amanida) -->
+            <img src="img/plat3.jpg" alt="Amanida mediterrània amb verdures de temporada" class="carta__imatge">
+            <span class="carta__imatge-text">amanida</span>
+          </div>
+          <div class="carta__imatge-container">
+            <!-- Substituir src per imatge del plat (ex: peix) -->
+            <img src="img/plat4.jpg" alt="Peix fresc del dia a la planxa" class="carta__imatge">
+            <span class="carta__imatge-text">peix</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- fi carta__grid -->
+  </section>
+
+  <!-- ========== GALERIA DE FOTOS ========== -->
+  <!-- 8 imatges, maquetació amb flex, les 1a,4a,5a,8a més fosques -->
+  <section class="galeria" id="galeria" aria-labelledby="galeria-title">
+    <h2 class="seccio-titol" id="galeria-title">Galeria d'imatges</h2>
+
+    <div class="galeria__grid">
+      <!-- Imatge 1: més fosca (nth-child: 1) -->
+      <img src="img/galeria1.jpg" alt="Ambient del restaurant durant el servei de nit" class="galeria__img">
+      <!-- Imatge 2: normal -->
+      <img src="img/galeria2.jpg" alt="Plats de degustació del menú del dia" class="galeria__img">
+      <!-- Imatge 3: normal -->
+      <img src="img/galeria3.jpg" alt="Terrassa exterior del restaurant amb vistes al jardí" class="galeria__img">
+      <!-- Imatge 4: més fosca (nth-child: 4) -->
+      <img src="img/galeria4.jpg" alt="Detall de la decoració de taula" class="galeria__img">
+      <!-- Imatge 5: més fosca (nth-child: 5) -->
+      <img src="img/galeria5.jpg" alt="Cuiner elaborant un dels plats estrella" class="galeria__img">
+      <!-- Imatge 6: normal -->
+      <img src="img/galeria6.jpg" alt="Selecció de vins de la carta" class="galeria__img">
+      <!-- Imatge 7: normal -->
+      <img src="img/galeria7.jpg" alt="Postres de la casa fets artesanalment" class="galeria__img">
+      <!-- Imatge 8: més fosca (nth-child: 8) -->
+      <img src="img/galeria8.jpg" alt="Vista general de la sala principal del restaurant" class="galeria__img">
+    </div>
+  </section>
+
+  <!-- ========== FORMULARI DE RESERVA ========== -->
+  <!-- Formulari de reserva amb grid-template-areas -->
+  <section class="reserva" id="reserva" aria-labelledby="reserva-title">
+    <h2 class="seccio-titol" id="reserva-title">Reserva</h2>
+
+    <form class="reserva__form" action="#" method="post" aria-label="Formulari de reserva de taula">
+
+      <!-- Camp Nom -->
+      <div class="reserva__grup reserva__grup--nom">
+        <label for="nom" class="reserva__label">Nom</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          class="reserva__input"
+          placeholder="El vostre nom"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <!-- Camp Número de persones -->
+      <div class="reserva__grup reserva__grup--persones">
+        <label for="persones" class="reserva__label">Número de persones</label>
+        <input
+          type="number"
+          id="persones"
+          name="persones"
+          class="reserva__input"
+          min="1"
+          max="20"
+          placeholder="2"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <!-- Camp Data -->
+      <div class="reserva__grup reserva__grup--data">
+        <label for="data" class="reserva__label">Data</label>
+        <input
+          type="date"
+          id="data"
+          name="data"
+          class="reserva__input"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <!-- Camp Hora -->
+      <div class="reserva__grup reserva__grup--hora">
+        <label for="hora" class="reserva__label">Hora</label>
+        <input
+          type="time"
+          id="hora"
+          name="hora"
+          class="reserva__input"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <!-- Camp Descripció  -->
+      <div class="reserva__grup reserva__grup--descripcio">
+        <label for="descripcio" class="reserva__label">Descripció</label>
+        <textarea
+          id="descripcio"
+          name="descripcio"
+          class="reserva__textarea"
+          rows="4"
+          placeholder="Al·lèrgies, preferències de taula, ocasió especial..."
+        ></textarea>
+      </div>
+
+      <!-- Botó enviar  -->
+      <div class="reserva__grup reserva__grup--boto">
+        <button type="submit" class="reserva__boto">Reservar</button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Maquetació amb flex: logotip esquerra, contacte centre, imatge dreta -->
+  <footer class="footer" aria-label="Peu de pàgina">
+   
+
+    <!-- Informació de contacte al centre -->
+    <div class="footer__contacte">
+      <!-- Icona de Google Material Icons per al correu -->
+      <span class="footer__item">
+        <span class="material-icons footer__icon" aria-hidden="true">email</span>
+        <a href="mailto:exemple@exemple.com" class="footer__link">exemple@exemple.com</a>
+      </span>
+      <!-- Icona de Google Material Icons per al telèfon -->
+      <span class="footer__item">
+        <span class="material-icons footer__icon" aria-hidden="true">phone</span>
+        <a href="tel:+34999999999" class="footer__link">999 999 999</a>
+      </span>
+    </div>
+
+    <!-- Logotip/imatge a la dreta: substituir src per imatge real del logo -->
+    <div class="footer__dreta">
+      <img
+        src="img/logo.svg"
+        alt="Logotip del Restaurant Els Coberts"
+        class="footer__img-logo"
+      >
+    </div>
+  </footer>
+
+</body>
+</html>
